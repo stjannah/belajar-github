@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TUGAS_6</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+	<div class="container">
+	 <h4>Belajar JavaScript</h4>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item active">
+	      <div class="box-ii" id="cari">Cari <i class="fa fa-search fa-1x"></i></div>	
+	      </li>
+	    </ul>
+	  </div>
+	 </div>
+	</nav>
+
+	 <div id="wrapper">
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="#">
+	                        Materi
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="page/grafik/grafik.html">Grafik</a>
+	                </li>
+	                <li>
+	                    <a href="page/datepiker/datepicker.html">Datepicker</a>
+	                </li>
+	                <li>
+	                    <a href="page/map/maps.html">Peta Lokasi</a>
+	                </li>
+	                <li>
+	                    <a href="page/tab/tab.html">Tab</a>
+	                </li>
+	                <li>
+	                    <a href="page/modal/index.html">Modal</a>
+	                </li>
+	                <li>
+	                    <a href="page/datatable/datatable.html">Data Tabel</a>
+	                </li>
+	                <li>
+	                    <a href="page/timeline/timeline.html">Timeline</a>
+	                </li>
+	                <li>
+	                    <a href="autoselect.html">AutoSelect</a>
+	                </li>
+	                <li>
+	                    <a href="#">CKEditor</a>
+	                </li>
+	            </ul>
+	        </div>
+
+
+	        <div id="page-content-wrapper">
+	            <div class="container-fluid">
+	                <div class="row">
+	                    <div class="col-lg-12">
+	                        <h1>Selamat Datang</h1>
+	                        <p>My Study merupakan kumpulan materi pembelajaran yang berisi beberapa komponen <br>
+		yang akan sering digunakan dalam mendesain sebuah halaman web. Dimana isinya <br>
+		antara lain adalah <b>Grafik, Datepicer, Peta Lokasi, Datatable, Tab, Model</b></p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	     
+	    </div>
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maps</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+	<div class="container">
+	 <h4>Belajar JavaScript</h4>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item active">
+	      <div class="box-ii" id="cari">Mencari  <i class="fa fa-search fa-1x"></i></div>	
+	      </li>
+	    </ul>
+	  </div>
+	 </div>
+	</nav>
+
+	 <div id="wrapper">
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="../../index.html">
+	                        Materi
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="../grafik/grafik.html">Grafik</a>
+	                </li>
+	                <li>
+	                    <a href="../datepiker/datepicker.html">Datepicker</a>
+	                </li>
+	                <li>
+	                    <a href="maps.html">Peta Lokasi</a>
+	                </li>
+	                <li>
+	                    <a href="../tab/tab.html">Tab</a>
+	                </li>
+	                <li>
+	                    <a href="#">Modal</a>
+	                </li>
+	                <li>
+	                    <a href="#">Data Tabel</a>
+	                </li>
+	                <li>
+	                    <a href="#">Timeline</a>
+	                </li>
+	                <li>
+	                    <a href="#">AutoSelect</a>
+	                </li>
+	                <li>
+	                    <a href="#">CKEditor</a>
+	                </li>
+	            </ul>
+	        </div>
+	         <div id="page-content-wrapper">
+	            <div class="container-fluid">
+	                <div class="row">
+	                    <div class="col-lg-12">
+	                    	<h2>Peta Lokasi</h2>
+	                        <div id="map" style="width: 500px; height: 500px; background-color: #fff0f5;"></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	     
+	    </div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/leaflet-offline.js"></script>
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>
+
+
+<script>
+      function initMap() {
+        var uluru = {lat: -8.6131156, lng: 116.3289857};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYQqqe9vWTQNrf2pv3C9fdzAbukst7cKk&callback=initMap&libraries=places"></script> 
+
+</body>
+</html>
